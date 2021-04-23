@@ -1,0 +1,60 @@
+@import "src/Styles/Colors";
+
+.button_container{
+  max-width: 240px;
+  .brand_button {
+    background: $brand;
+    padding: 15px 0;
+    width: 100%;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    color: $black;
+    border: 1px solid $brand;
+
+    &:active,
+    &:focus {
+      outline: none;
+      opacity: 0.7;
+    }
+
+    &.without_box_shadow {
+      &:hover {
+        opacity: 0.8;
+      }
+
+      &:active,
+      &:focus {
+        box-shadow: none !important;
+      }
+    }
+  }
+}
+
+.dashboard_container{
+  .button_container{
+    margin: 0;
+    max-width: 290px;
+    height: 56px;
+    .gradient_button{
+      height: 100%;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .button_container {
+    justify-content: flex-start;
+    max-width: 100%;
+
+    .gradient_button {
+      min-width: 100%;
+    }
+  }
+  .dashboard_container{
+    .button_container{
+      max-width: 100%;
+    }
+  }
+}

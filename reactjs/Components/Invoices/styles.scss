@@ -1,0 +1,249 @@
+@import "src/Styles/Colors";
+@import "src/Styles/variables";
+
+.invoices-container {
+  background: $light-background;
+  width: 100%;
+  min-height: $min_content_height;
+  padding: 5rem 0;
+
+  .back_button {
+    margin-left: 27%;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 2rem;
+    color: $grey-dark;
+    cursor: pointer;
+
+    svg {
+      width: 20px;
+      margin: 5px;
+    }
+  }
+
+  .invoices {
+    position: relative;
+    background: $white-color;
+    max-width: 540px;
+    margin: 0 auto;
+    padding: 3rem 0 0;
+    min-height: 380px;
+
+    svg{
+      position: absolute;
+      top: -40px;
+      left: calc(50% - 40px);
+
+    }
+
+    .not-found-error{
+      margin: 150px 0;
+      text-align: center;
+      font-size: 2.5rem;
+      text-transform: uppercase;
+    }
+
+    .invoice-header {
+      margin-top: 6rem;
+      h2 {
+        font-size: 2.5rem;
+        font-weight: 600;
+        text-align: center;
+        margin: 2rem 0;
+      }
+
+      h5 {
+        text-align: center;
+        font-size: 1.8rem;
+        margin: 3rem 0;
+      }
+    }
+
+    .invoice-checkout-container {
+      background: $backgroundOpacity;
+      padding: 5rem 2rem;
+
+      .payed-amount{
+        margin: 2rem 0;
+        font-size: 2.2rem;
+      }
+
+      .invoice-split-form {
+        margin: 2rem 0;
+
+        form {
+          margin-left: 2rem;
+
+          .form-row {
+            margin-right: 0;
+            margin-left: 0;
+            display: flex;
+            justify-content: center;
+
+            .form-label {
+              font-size: 1.2rem;
+            }
+
+            .form-control {
+              font-size: 1.5rem;
+              padding: 2rem;
+            }
+          }
+        }
+      }
+
+      .invoice-card-container {
+        width: 350px;
+        margin: 0 auto;
+        .profile_item_container {
+          border: 2px solid $grey-stroke;
+          height: 70px;
+          margin: 0 auto 10px;
+          vertical-align: middle;
+          background-color: $white-color;
+          width: 100%;
+          max-width: 350px;
+          color: $black;
+
+          .profile_item {
+            font-size: 1.6rem;
+            text-align: left;
+          }
+
+
+          &.active {
+            box-shadow: $grey-box-shadow !important;
+            background-color: $white-color !important;
+            border-color: $black !important;
+
+            .round {
+              border: 6px solid $black;
+            }
+          }
+
+          i {
+            margin-left: 10px;
+            margin-right: 10px;
+            color: $grey-text;
+            font-size: 1.6rem;
+            vertical-align: middle;
+          }
+
+          .inline_buttons_container {
+            .inline_button {
+              padding: 0 6px 2px 6px;
+              cursor: pointer;
+            }
+          }
+        }
+        .button_container {
+          max-width: 100%;
+          background: $white-color;
+        }
+
+        .payment_add_form{
+          margin-top: 3rem;
+          h5{
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+    .invoice-services-list{
+      h4{
+        font-size: 1.5rem;
+        font-weight: 600;
+        padding: 3rem 4rem 0;
+      }
+      .invoice-service-item{
+        font-size: 1.5rem;
+        font-weight: 400;
+        border-bottom: 1px solid $secondary;
+        padding: 3rem 4rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+
+        &.total{
+          border: none;
+          font-weight: 600;
+          font-size: 1.5rem;
+          .title{
+            text-transform: uppercase;
+            color: $grey-text;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .invoices-container{
+    margin-top: 58px;
+    min-height: calc(100vh - 58px);
+    padding: 6rem 0 0;
+
+    .back_button{
+      display: none;
+    }
+
+    .invoices{
+      .invoice-header{
+        padding: 0 1rem;
+        h2{
+          font-size: 2rem;
+          margin: 1rem 0;
+        }
+        h5{
+          font-size: 1.8rem;
+          margin: 1rem 0;
+        }
+      }
+      .invoice-checkout-container{
+        padding: 2.5rem 1.5rem;
+        h1{
+          font-size: 2.5rem;
+        }
+        .payed-amount{
+          margin: 1rem 0;
+          font-size: 2.2rem;
+        }
+        .invoice-card-container{
+          .button_container{
+            .btn{
+              font-size: 1.5rem;
+            }
+          }
+        }
+      }
+      .invoice-services-list{
+        h4{
+          padding: 2rem 2rem 0;
+        }
+        .invoice-service-item{
+          padding: 2rem;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 767px) {
+  .invoices-container {
+    padding: 0;
+
+
+    .invoices {
+      padding-top: 60px;
+
+      svg {
+        position: absolute;
+        top: 10px;
+        left: calc(50% - 40px);
+
+      }
+    }
+  }
+}

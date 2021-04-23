@@ -1,0 +1,51 @@
+@import "src/Styles/Colors";
+
+.button_container{
+  .outline_button{
+    width: 100%;
+    padding: 15px 0;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-width: 2px;
+    border-color: $black;
+    color: $black;
+
+    &:hover {
+      color: $white-color;
+      background-color: $black;
+    }
+
+    &:active,
+    &:focus {
+      box-shadow: $grey-box-shadow;
+    }
+  }
+}
+
+.service-detail-content{
+  .button_container{
+    margin: 3rem 0;
+    max-width: 100%;
+
+    .outline_button{
+      width: 100%;
+      padding: 2rem 0;
+      font-size: 1.8rem;
+      text-transform: uppercase;
+
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .button_container {
+    margin: 10px auto;
+
+
+    .outline_button {
+      padding: 15px 0;
+      font-size: 1.5rem;
+    }
+  }
+}
