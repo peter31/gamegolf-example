@@ -1,6 +1,7 @@
 # REACT JS stack approach
 
 * In general, we use react functional components and react hooks. 
+* Usually we use Typescript with react.
 * We use SCSS for creating stylesheets.
 * We use react-bootstrap components to speed up development.
 * We use both MobX and Redux stores in react projects depends on requirements of the specific project.
